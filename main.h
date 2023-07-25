@@ -1,13 +1,20 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef _PRINTF_H
+#define _PRINTF_H
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
 #include <limits.h>
 #include <unistd.h>
 
+#define OUTPUT_BUF_SIZE 1024
+#define BUF_FLUSH -1
 
 #define NULL_STRING "(null)"
+
+#define PARAM_INIT {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+
+#define CONVERT_LOWERCASE   1
+#define CONVERT_UNSIGNED    2
 /**
 * struct spec - struct token
 *
@@ -19,13 +26,6 @@ typedef struct spec
 char *spec;
 int (*f)(va_list, param_t *);
 } spec_t;
-
-
-
-
-
-
-
 
 
 int print_percent(va_list a, param_t *param);
