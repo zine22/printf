@@ -1,0 +1,44 @@
+#ifndef MAIN_H
+#define MAIN_H
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <limits.h>
+#include <unistd.h>
+
+
+#define NULL_STRING "(null)"
+/**
+* struct spec - struct token
+*
+* @spec: format
+* @f: the function
+*/
+typedef struct spec
+{
+char *spec;
+int (*f)(va_list, param_t *);
+} spec_t;
+
+
+
+
+
+
+
+
+
+int print_percent(va_list a, param_t *params);
+int print_string(va_list a, param_t *params);
+int print_char(va_list a, param_t *params);
+
+int print_int(va_list a, param_t *params);
+
+int _puts(char *str);
+int _putchar(int c);
+
+
+int _printf(const char *format, ...);
+
+
+#endif
