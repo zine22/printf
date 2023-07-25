@@ -8,7 +8,7 @@
 * Return: number of bytes
 */
 
-int (*get_spec(char *s))(va_list a, param_t *param)
+int (*get_spec(char *s))(va_list a, params_t *params)
 {
 spec_t specs[] = {
 {"c", print_char},
@@ -42,11 +42,11 @@ return (NULL);
 * Return: number of bytes
 */
 
-int get_print_func(char *s, va_list a, param_t *param)
+int get_print_func(char *s, va_list a, params_t *params)
 {
-int (*f)(va_list, param_t *) = get_spec(s);
+int (*f)(va_list, params_t *) = get_spec(s);
 
 if (f)
-return (f(a, param));
+return (f(a, params));
 return (0);
 }

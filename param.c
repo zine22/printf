@@ -1,24 +1,24 @@
 #include "main.h"
 
 /**
-* init_param - clear struct and reset
+* init_params - clear struct and reset
 *
-* @param: parameters struct
+* @params: parameters struct
 * @a: argument ptr
 *
 * Return: void
 */
 
-void init_param(param_t *param, va_list a)
+void init_params(params_t *params, va_list a)
 {
-param->unsign = 0;
-param->space = 0;
-param->hash = 0;
-param->zero = 0;
-param->plus = 0;
-param->minus = 0;
-param->h_modifier = 0;
-param->l_modifier = 0;
+params->unsign = 0;
+params->space = 0;
+params->hash = 0;
+params->zero = 0;
+params->plus = 0;
+params->minus = 0;
+params->h_modifier = 0;
+params->l_modifier = 0;
 
 
 (void)a;
