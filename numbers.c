@@ -49,7 +49,7 @@ return (ptr);
 
 int print_unsigned(va_list a, params_t *params)
 {
-unsigned long l;
+unsigned l;
 
 if (params->l_modifier)
 l = (unsigned long)va_arg(a, unsigned long);
@@ -58,7 +58,7 @@ l = (unsigned short int)va_arg(a, unsigned int);
 else
 l = (unsigned int)va_arg(a, unsigned int);
 params->unsign = 1;
-return (print_number(convert(1, 10, CONVERT_UNSIGNED, params), params));
+return (print_number(convert(l, 10, CONVERT_UNSIGNED, params), params));
 }
 
 /**

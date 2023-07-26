@@ -1,5 +1,6 @@
 #ifndef _PRINTF_H
 #define _PRINTF_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
@@ -74,7 +75,7 @@ int (*get_spec(char *s))(va_list a, params_t *params);
 int get_print_func(char *s, va_list a, params_t *params);
 int get_flag(char *s, params_t *params);
 int get_modifier(char *s, params_t *params);
-char *get_width(char *s, va_list a, params_t *params);
+char *get_width(char *s, params_t *params, va_list a);
 
 
 int print_hex(va_list a, params_t *params);

@@ -147,4 +147,3 @@ d = d * 10 + (*s++ - '0');
 params->width = d;
 return (s);
 }
-

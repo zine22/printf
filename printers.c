@@ -63,20 +63,20 @@ int i, index;
 int count = 0;
 char arr[] =
 "NOPQRSTUVWXYZABCDEFGHIJKLM     nopqrstuvwxyzabcdefghijklm";
-char *a = va_arg(a, char *);
+char *b = va_arg(a, char *);
 (void)params;
 
 i = 0;
 index = 0;
-while (a[i])
+while (b[i])
 {
-if ((a[i] >= 'A' && a[i] <= 'Z') || (a[i] >= 'a' && a[i] <= 'z'))
+if ((b[i] >= 'A' && b[i] <= 'Z') || (b[i] >= 'a' && b[i] <= 'z'))
 {
-index = a[i] - 65;
+index = b[i] - 65;
 count += _putchar(arr[index]);
 }
 else
-count += _putchar(a[i]);
+count += _putchar(b[i]);
 i++;
 }
 return (count);
