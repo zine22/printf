@@ -24,12 +24,12 @@ return (sum);
 }
 
 /**
+* print_rev - prints str in reverse
 *
+* @a: string
+* @params: parameters
 *
-*
-*
-*
-*
+* Return: number of bytes
 */
 
 int print_rev(va_list a, params_t *params)
